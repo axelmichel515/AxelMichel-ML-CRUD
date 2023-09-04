@@ -37,16 +37,19 @@
 						</select>
 					</div>
 					<!--Agregar Imagen -->
-					<div class="col-12">
-						<label for="image" class="form-label">Ingrese imagen del producto:</label>
-						<input type="file" id="image" name="image" class="form-input">
-					</div>
+					
 					<div class="col-12">
 						<label for="description" class="form-label">Descripción:</label>
 						<textarea name="description" id="description" class="form-input"></textarea>
 					</div>
-					<div class="col-12">
-						<button type="submit" class="buy-now-button">Guardar producto</button>
+					<div class="d-flex flex-row">
+						<div class="col-8 mb-3">
+							<label for="image" class="buy-now-button">Inserte una imagen</label>
+							<input hidden class="form-control" type="file" id="image" name="image">
+						</div>	
+						<div class="col-12">
+							<button type="submit" class="buy-now-button">Guardar producto</button>
+						</div>
 					</div>
 				</div>
 			</form>

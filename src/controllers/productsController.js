@@ -66,7 +66,8 @@ const controller = {
 		const productsModify = products.map(product => {
 
 			if (product.id === +req.params.id){
-				req.file && existsSync(`./public/images/products/${products.image}`) && unlinkSync(`./public/images/products/${products.image}`)
+			req.file && existsSync(`./public/images/products/${product.image}`) &&
+			unlinkSync(`./public/images/products/${product.image}`);
 
 			product.name = name.trim();
 			product.price = +price;
@@ -89,8 +90,8 @@ const controller = {
 		const products = readJSON("productsDataBase");
 		const productsModify = products.filter((product) => {
 			if (product.id === +req.params.id) {
-				existsSync(`./public/img/products/${product.image}`) &&
-				unlinkSync(`./public/img/products/${product.image}`);
+				existsSync(`./public/images/products/${product.image}`) &&
+				unlinkSync(`./public/images/products/${product.image}`);
 			}
 			return product.id !== +req.params.id;
 		
